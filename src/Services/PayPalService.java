@@ -2,19 +2,16 @@ package Services;
 
 public class PayPalService implements OnlinePaymentService {
 
-	Double resultInterest;
-	
 	@Override
 	public Double paymentFee(Double amount) {
 		
-		return null;
+		return amount * 0.02;
 	}
 
 	@Override
 	public Double interest(Double amount, Integer months) {
 		
-		resultInterest = amount + 0.01 * months;
-		return resultInterest;
+		return amount * 0.01 * months;
 	
 	}
 
